@@ -36,7 +36,7 @@ public class ModuloAdapter extends RecyclerView.Adapter<ModuloAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.bindData(modulos.get(position));
     }
 
 
@@ -59,7 +59,9 @@ public class ModuloAdapter extends RecyclerView.Adapter<ModuloAdapter.ViewHolder
         }
 
         void bindData(final Modulo item){
-
+            modul.setText(item.getModul());
+            nombreLargo.setText(item.getNombreLargo());
+            profe.setText(item.getProfe());
         }
     }
 }

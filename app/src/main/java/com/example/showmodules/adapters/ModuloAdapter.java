@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.showmodules.R;
@@ -18,13 +17,11 @@ import java.util.List;
 public class ModuloAdapter extends RecyclerView.Adapter<ModuloAdapter.ViewHolder> {
 
     private List<Modulo> modulos;
-    private LayoutInflater inflater;
-    private Context context;
+    private final LayoutInflater inflater;
 
     public ModuloAdapter(List<Modulo> modulos, Context context) {
         this.inflater = LayoutInflater.from(context);
         this.modulos = modulos;
-        this.context = context;
     }
 
     @NonNull
